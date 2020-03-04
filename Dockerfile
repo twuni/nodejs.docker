@@ -1,8 +1,8 @@
-FROM alpine:3.10.2
+FROM alpine:3.11.3
 
-ENV NODEJS_VERSION="13.0.0" \
-    NPM_VERSION="6.12.0" \
-    YARN_VERSION="1.19.1"
+ARG NODEJS_VERSION
+ARG NPM_VERSION
+ARG YARN_VERSION
 
 RUN set -e;\
   apk add --no-cache --virtual .docker git;\
