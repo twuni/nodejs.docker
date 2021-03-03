@@ -1,7 +1,7 @@
 .PHONY: default build publish
 
 DOCKER_IMAGE_NAME=twuni/nodejs
-NODEJS_MAJOR_VERSION=12
+NODEJS_MAJOR_VERSION=15
 
 NPM_VERSION=$(shell npm view npm version)
 NODEJS_VERSION=$(shell asdf list-all nodejs | grep -E "^$(NODEJS_MAJOR_VERSION)\." | tail -1)

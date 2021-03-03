@@ -1,4 +1,4 @@
-FROM alpine:3.11.3
+FROM alpine:3.12.4
 
 ARG NODEJS_VERSION
 ARG NPM_VERSION
@@ -8,7 +8,7 @@ RUN set -e;\
   apk add --no-cache --virtual .docker git;\
   apk add --no-cache --virtual .docker-package-integrity gnupg;\
   apk add --no-cache --virtual .docker-nodejs libstdc++;\
-  apk add --no-cache --virtual .docker-nodejs-builder make gcc g++ python linux-headers libgcc;\
+  apk add --no-cache --virtual .docker-nodejs-builder make gcc g++ python3 linux-headers libgcc;\
   mkdir -p /tmp/nodejs;\
   (\
     cd /tmp/nodejs;\
